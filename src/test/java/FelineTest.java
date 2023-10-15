@@ -34,7 +34,8 @@ public class FelineTest {
     public void returngetKittens() {
         Feline feline = new Feline();
         int actual = feline.getKittens();
-        assertEquals(1, actual);
+        int expected = 1;
+        assertEquals(expected, actual);
     }
 
     @Test

@@ -7,6 +7,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
+import java.util.Stack;
 
 import static org.junit.Assert.*;
 
@@ -34,7 +35,9 @@ public class LionTest {
         try {
             Lion lion = new Lion("random", feline);
         } catch (Exception e) {
-            assertEquals(e.getMessage(),"Используйте допустимые значения пола животного - самец или самка" );
+            String expected = "Используйте допустимые значения пола животного - самец или самка" ;
+            String actual = e.getMessage();
+            assertEquals(actual,expected );
         }
     }
 
